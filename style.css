@@ -1,0 +1,203 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(34, 34, 34);
+  transition: background 0.5s;
+}
+.elements .segitiga {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.elements .segitiga .bag1 {
+  height: 70%;
+  width: 70%;
+  border-right: 3px solid rgba(250, 128, 114, 0.575);
+  border-top: 3px solid rgba(250, 128, 114, 0.575);
+  margin: auto;
+}
+.elements .segitiga .bag2 {
+  height: 70%;
+  width: 100%;
+  border-top: 3px solid rgba(250, 128, 114, 0.575);
+  margin: auto;
+  position: absolute;
+  top: 38%;
+  left: -25%;
+  transform: rotate(45deg);
+}
+.elements .kotak {
+  height: 50px;
+  width: 50px;
+  transition: 0.3s;
+}
+.elements .kotak .bag1 {
+  height: 70%;
+  width: 70%;
+  border: 3px solid rgba(250, 128, 114, 0.575);
+}
+.elements {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+}
+.element {
+  position: absolute;
+  transition: 1s;
+}
+.element .psg,
+.element .pk {
+  animation: putar;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.con-kado {
+  height: 10rem;
+  width: 10rem;
+  margin: 65vh auto;
+  position: relative;
+  display: flex;
+}
+.kado {
+  height: 8rem;
+  width: 8rem;
+  margin: 0 auto;
+  background-color: salmon;
+  position: relative;
+  z-index: 1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.kado .ds1 {
+  width: 12rem;
+  height: 2rem;
+  background-color: rgba(95, 124, 204, 0.979);
+  position: absolute;
+  transform: rotate(45deg);
+  top: 40px;
+  left: -40px;
+}
+.kado .ds2 {
+  width: 12rem;
+  height: 2rem;
+  background-color: rgba(95, 124, 204, 0.979);
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 50px;
+  left: -35px;
+}
+.tutup {
+  width: 9rem;
+  height: 2rem;
+  margin: auto;
+  background-color: rgba(95, 124, 204, 0.979);
+  position: absolute;
+  left: 0.5rem;
+  z-index: 2;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: 0.5s;
+}
+.text {
+  position: absolute;
+  width: 100vw;
+  top: 70vh;
+  display: flex;
+}
+.text h1 {
+  font-family: "Titan One", cursive;
+  font-size: 1rem;
+  display: flex;
+  margin: auto;
+  text-align: center;
+}
+.text h1 .abjad {
+  color: rgba(200, 89, 251, 0.835);
+  animation: huruf;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  transition: 0.2s;
+  margin: 0.5px;
+  transition-property: color, font-size, opacity;
+  opacity: 0;
+}
+
+/* ANIMATION */
+@keyframes putar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes dip {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes kocok {
+  0% {
+    transform: rotate(0deg);
+  }
+  12% {
+    transform: rotate(20deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  37% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  62% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  87% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes huruf {
+  0% {
+    transform: translate(0, 1rem) rotate(40deg);
+  }
+  25% {
+    transform: translate(0, -40vh) rotate(40deg);
+  }
+  50% {
+    transform: translate(0, -33vh) rotate(0deg);
+  }
+  75% {
+    transform: translate(0, -35vh) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, -35vh);
+  }
+}
