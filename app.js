@@ -63,9 +63,9 @@ conKado.addEventListener("click", () => {
           if (inCl < aTx.length) {
             aTx[inCl].style.color = randColor[rand(randColor.length)];
             if (inCl > 5 && inCl < aTx.length - 5) {
-              aTx[inCl].style.fontSize = "2.5rem";
+              aTx[inCl].style.fontSize = "3rem";
               setTimeout(() => {
-                aTx[inCl].style.fontSize = "2.3rem";
+                aTx[inCl].style.fontSize = "2.7rem";
               }, 100);
             }
             inCl++;
@@ -73,7 +73,7 @@ conKado.addEventListener("click", () => {
           if (inTx < aTx.length) {
             aTx[inTx].style.color = randColor[rand(randColor.length - 1)];
             aTx[inTx].style.animationPlayState = "running";
-            aTx[inTx].style.fontSize = "2.3rem";
+            aTx[inTx].style.fontSize = "2.7rem";
             aTx[inTx].style.opacity = "1";
             inTx++;
           }
